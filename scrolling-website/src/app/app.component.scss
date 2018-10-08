@@ -15,16 +15,35 @@
   box-sizing: border-box
 }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;    
-  position: relative;
-  margin: auto;
+
+@media only screen and (max-width: 1080px) {
+  .web-body {
+    max-width: 100%;       
+    position: relative;        
+  }
+
+  .columns {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .web-body {
+    width: 1080px;    
+    position: relative; 
+    margin-right: auto;
+    margin-left: auto;    
+  }
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+  display: none;
+  position: relative; 
+}
+
+img {
+  max-width: 100%;         
 }
 
 /* Next & previous buttons */
@@ -96,4 +115,79 @@
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* Create three columns of equal width */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  margin-bottom: 60px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.button {
+  background-color: #3f51b5;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-height: 1200px) {
+  .footer {
+    position: static;
+  }
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom:0;
+  width:100%;
+  padding: 10px;  
+  background: #3f51b5;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
 }
